@@ -1,3 +1,4 @@
+// components/SearchBar.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -24,7 +25,7 @@ export default function SearchBar() {
   return (
     <form
       onSubmit={handleSearchExecution}
-      className="w-full max-w-5xl bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-gray-100 grid grid-cols-1 md:grid-cols-4 gap-4 items-end"
+      className="w-full max-w-5xl mx-auto bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-gray-100 grid grid-cols-1 md:grid-cols-4 gap-4 items-end"
     >
       {/* Destination Location Input Column */}
       <div className="space-y-2">
