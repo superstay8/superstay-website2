@@ -1,9 +1,10 @@
+// src/components/Navbar.tsx (or your exact path to Navbar)
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Hotel, Menu, X, LayoutDashboard } from "lucide-react";
+import { Hotel, Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -58,18 +59,6 @@ export default function Navbar() {
               </Link>
             );
           })}
-          
-          <Link
-            href="/admin"
-            className={`flex items-center space-x-2 text-sm font-bold uppercase tracking-wider px-5 py-2.5 rounded-xl border-2 border-brand-navy transition-premium ${
-              pathname?.startsWith("/admin")
-                ? "bg-brand-navy text-white"
-                : "text-brand-navy hover:bg-brand-navy hover:text-white"
-            }`}
-          >
-            <LayoutDashboard className="h-4 w-4" />
-            <span>Admin Console</span>
-          </Link>
         </div>
 
         {/* Mobile Navigation Trigger */}
@@ -98,14 +87,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link
-            href="/admin"
-            onClick={() => setIsOpen(false)}
-            className="flex items-center space-x-2 text-sm font-bold uppercase tracking-wider p-3 bg-brand-navy text-white rounded-xl"
-          >
-            <LayoutDashboard className="h-4 w-4" />
-            <span>Admin Console</span>
-          </Link>
         </div>
       )}
     </nav>

@@ -1,26 +1,57 @@
-// src/app/admin/page.tsx
-import React from "react";
+// src/app/admin/AdminOverviewPage.tsx
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { ClipboardList, Layers, IndianRupee, TrendingUp } from "lucide-react";
-import { getBookings, getProperties } from "@/lib/storage";
 
-export const revalidate = 0;
+export default function AdminOverviewPage() {
+  const [stats, setStats] = useState({ propertiesCount: 0, bookingsCount: 0, revenue: 0 });
+  const [loading, setLoading] = useState(true);
 
-export default async function AdminOverviewPage() {
-  const allBookings = await getBookings();
-  const allProperties = await getProperties();
+  useEffect(() => {
+    async function loadTelemetry() {
+      try {
+        // Fetch operations targeting data/ inventory layers synchronously
+        const propsRes = await fetch("/api/properties");
+        const booksRes = await fetch("/api/bookings");
+        
+        const properties = await propsRes.json();
+        const bookings = await booksRes.json();
 
-  const grossCalculatedRevenue = allBookings
-    .filter((b) => b.status === "Confirmed")
-    .reduce((accum, curr) => accum + curr.totalPrice, 0);
+        const grossCalculatedRevenue = bookings
+          .filter((b: any) => b.status === "Confirmed")
+          .reduce((accum: number, curr: any) => accum + curr.totalPrice, 0);
+
+        setStats({
+          propertiesCount: properties.length,
+          bookingsCount: bookings.length,
+          revenue: grossCalculatedRevenue
+        });
+      } catch (err) {
+        console.error("Telemetry mapping failure", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadTelemetry();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="p-8 text-center text-xs font-bold tracking-widest uppercase text-brand-muted animate-pulse">
+        Loading Operational Control Assets...
+      </div>
+    );
+  }
 
   const statsMetricsCards = [
-    { label: "Total Asset Inherent Units", value: allProperties.length, icon: Layers, color: "text-blue-500 bg-blue-50" },
-    { label: "Tracked Transaction Logs", value: allBookings.length, icon: ClipboardList, color: "text-brand-teal bg-teal-50" },
-    { label: "Gross Aggregated Revenue", value: `₹${grossCalculatedRevenue.toLocaleString("en-IN")}`, icon: IndianRupee, color: "text-emerald-500 bg-emerald-50" },
+    { label: "Total Asset Inherent Units", value: stats.propertiesCount, icon: Layers, color: "text-blue-500 bg-blue-50" },
+    { label: "Tracked Transaction Logs", value: stats.bookingsCount, icon: ClipboardList, color: "text-brand-teal bg-teal-50" },
+    { label: "Gross Aggregated Revenue", value: `₹${stats.revenue.toLocaleString("en-IN")}`, icon: IndianRupee, color: "text-emerald-500 bg-emerald-50" },
   ];
 
   return (
-    <div className="space-y-8 animate-fadeIn p-4 sm:p-8">
+    <div className="space-y-8 p-4 sm:p-8 animate-fadeIn">
       <div>
         <h1 className="text-2xl font-black text-brand-navy tracking-tight">Executive Management Overview</h1>
         <p className="text-xs text-brand-muted font-medium mt-0.5">Real-time telemetry indicators reflecting values committed across the mock tracking file layers.</p>

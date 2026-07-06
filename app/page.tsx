@@ -40,9 +40,7 @@ export default async function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/40 via-brand-navy/90 to-brand-offWhite pointer-events-none" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto text-center flex flex-col items-center space-y-8 pt-12">
-          <span className="text-brand-teal font-black uppercase tracking-widest text-xs sm:text-sm bg-brand-teal/10 border border-brand-teal/30 px-5 py-2 rounded-full backdrop-blur-md">
-            The Curation of Elite Stays
-          </span>
+          
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight max-w-5xl leading-[1.1]">
             Detoxify Luxury. Discover <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-teal-300">Architectural Perfection</span>.
           </h1>

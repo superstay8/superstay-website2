@@ -1,3 +1,4 @@
+// src/components/Footer.tsx (or your exact path to Footer)
 import React from "react";
 import Link from "next/link";
 import { Hotel, Mail, Phone, MapPin } from "lucide-react";
@@ -57,7 +58,9 @@ export default function Footer() {
       </div>
       
       <div className="w-full mx-auto px-4 sm:px-8 lg:px-12 mt-16 pt-8 border-t border-gray-800 text-center text-sm font-bold tracking-wide text-gray-500">
-        © 2026 SuperStay
+        <Link href="/admin" className="hover:text-gray-400 cursor-default transition-all duration-300">
+          © 2026 SuperStay
+        </Link>
       </div>
     </footer>
   );
