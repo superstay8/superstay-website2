@@ -5,40 +5,8 @@ export default function ContactPage() {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 lg:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 gap-16 animate-fadeIn">
       
-      {/* LEFT CONTENT BLOCK: BRAND CHANNELS COPYWRITING VIEW */}
-      <div className="space-y-8">
-        <div className="space-y-4">
-          <span className="text-xs font-black uppercase tracking-widest text-brand-teal">Direct Concierge Pipelines</span>
-          <h1 className="text-4xl sm:text-5xl font-black text-brand-navy tracking-tight">Initiate Communication Context</h1>
-          <p className="text-brand-muted text-base font-medium leading-relaxed">
-            Reach out via our active chat lines or email paths below. Our operations center keeps channels open around the clock to handle your reservation requirements.
-          </p>
-        </div>
-
-        <div className="space-y-4 text-sm font-medium text-brand-navy">
-          <div className="flex items-start space-x-3 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-            <MapPin className="h-5 w-5 text-brand-teal mt-0.5 flex-shrink-0" />
-            <div>
-              <span className="text-brand-muted block font-bold text-xs uppercase tracking-wider mb-0.5">Corporate Headquarters Office</span>
-              <span className="font-bold">Hilite Business Park, Calicut, Kerala</span>
-            </div>
-          </div>
-
-          <div className="flex items-start space-x-3 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-            <Phone className="h-5 w-5 text-brand-teal mt-0.5 flex-shrink-0" />
-            <div>
-              <span className="text-brand-muted block font-bold text-xs uppercase tracking-wider mb-0.5">Secondary Support Hotline Track</span>
-              <span className="font-bold">+91 97782 50828 (Corporate Display Reference Only)</span>
-            </div>
-          </div>
-          
-          
-          </div>
-        </div>
-      </div>
-
-      {/* RIGHT ACTION CORES: DYNAMIC INTERACTIVE TRIGGER PATH ACTIONS BUTTON MATRIX */}
-      <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-xl space-y-6 self-center">
+      {/* RIGHT ACTION CORES: MOVES TO THE TOP ON MOBILE (order-1) AND TO THE RIGHT ON DESKTOP (lg:order-2) */}
+      <div className="bg-white p-8 sm:p-10 rounded-3xl border border-gray-200 shadow-xl space-y-6 self-center order-1 lg:order-2 w-full">
         <h3 className="text-sm font-black uppercase tracking-widest text-brand-navy border-b border-gray-100 pb-3">
           Execute Instant Direct Actions
         </h3>
@@ -75,6 +43,35 @@ export default function ContactPage() {
             </div>
             <ChevronRight className="h-4 w-4" />
           </a>
+        </div>
+      </div>
+
+      {/* LEFT CONTENT BLOCK: MOVES TO THE BOTTOM ON MOBILE (order-2) AND TO THE LEFT ON DESKTOP (lg:order-1) */}
+      <div className="space-y-8 order-2 lg:order-1">
+        <div className="space-y-4">
+          <span className="text-xs font-black uppercase tracking-widest text-brand-teal">Direct Concierge Pipelines</span>
+          <h1 className="text-4xl sm:text-5xl font-black text-brand-navy tracking-tight">Initiate Communication Context</h1>
+          <p className="text-brand-muted text-base font-medium leading-relaxed">
+            Reach out via our active chat lines or email paths below. Our operations center keeps channels open around the clock to handle your reservation requirements.
+          </p>
+        </div>
+
+        <div className="space-y-4 text-sm font-medium text-brand-navy">
+          <div className="flex items-start space-x-3 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+            <MapPin className="h-5 w-5 text-brand-teal mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-brand-muted block font-bold text-xs uppercase tracking-wider mb-0.5">Corporate Headquarters Office</span>
+              <span className="font-bold">Hilite Business Park, Calicut, Kerala</span>
+            </div>
+          </div>
+
+          <div className="flex items-start space-x-3 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
+            <Phone className="h-5 w-5 text-brand-teal mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-brand-muted block font-bold text-xs uppercase tracking-wider mb-0.5">Secondary Support Hotline Track</span>
+              <span className="font-bold">+91 97782 50828 (Message on WhatsApp)</span>
+            </div>
+          </div>
         </div>
       </div>
 
