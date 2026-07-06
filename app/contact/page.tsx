@@ -32,12 +32,7 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <div className="flex items-start space-x-3 bg-white p-5 rounded-2xl border border-gray-100 shadow-sm">
-            <Mail className="h-5 w-5 text-brand-teal mt-0.5 flex-shrink-0" />
-            <div>
-              <span className="text-brand-muted block font-bold text-xs uppercase tracking-wider mb-0.5">Alternative Inbox Alias</span>
-              <span className="font-bold">superstay.super@gmail.com</span>
-            </div>
+          
           </div>
         </div>
       </div>
