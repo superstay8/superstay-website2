@@ -1,0 +1,18 @@
+[
+  {
+    "id": "BK1001",
+    "propertyId": "prop-1",
+    "propertyName": "Elysian Serenity Villa & Private Pool",
+    "propertyImage": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+    "fullName": "Jasil",
+    "email": "jasisfasfasidfi@gmai.com",
+    "phone": "+91 0000000000",
+    "guests": 2,
+    "checkIn": "2026-02-12",
+    "checkOut": "2026-02-13",
+    "specialRequest": "None",
+    "totalPrice": 14500,
+    "status": "Confirmed",
+    "createdAt": "2026-07-05T21:32:58.015Z"
+  }
+]

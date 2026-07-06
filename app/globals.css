@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
+@theme {
+  --color-brand-navy: #0F172A;
+  --color-brand-navyLight: #1E293B;
+  --color-brand-teal: #0D9488;
+  --color-brand-tealHover: #0F766E;
+  --color-brand-offWhite: #F8FAFC;
+  --color-brand-muted: #64748B;
+  
+  /* ─── ADD THIS LINE TO OVERRIDE THE ENTIRE WEBSITE FONT ─── */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F8FAFC;
+  --foreground: #0F172A;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  /* ─── ADD THIS LINE TO ASSIGN THE FONT TO THE BODY CANVAS ─── */
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+/* ... rest of your custom glassmorphism styles ... */
+
+/* Glassmorphism layouts */
+.glass-effect {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.transition-premium {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }

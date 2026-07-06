@@ -1,0 +1,90 @@
+[
+  {
+    "id": "prop-1",
+    "name": "Elysian Serenity Villa & Private Pool",
+    "description": "Experience luxury redefined at Elysian Serenity. Nestled in a quiet valley, this stunning property offers a seamless blend of contemporary high-end design and natural elements. Features panoramic floor-to-ceiling windows, an infinity pool overlooking the horizon, and a private chef upon request.",
+    "location": "Wayanad, Kerala",
+    "price": 14500,
+    "rating": 4.9,
+    "amenities": [
+      "Private Pool",
+      "High-Speed Wi-Fi",
+      "Chef Service",
+      "Bonfire",
+      "Air Conditioning",
+      "Bathtub"
+    ],
+    "bedrooms": 3,
+    "bathrooms": 4,
+    "guests": 6,
+    "images": [
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80"
+    ],
+    "category": "Villa"
+  },
+  {
+    "id": "prop-2",
+    "name": "The Obsidian Ridge Cabin",
+    "description": "A striking dark-facade modern cabin suspended over the mountain edge. Designed for minimalists who crave luxury. Unwind in the glass-walled hot tub while stargazing or enjoy your morning espresso with low-hanging clouds right outside your deck.",
+    "location": "Munnar, Kerala",
+    "price": 8900,
+    "rating": 4.8,
+    "amenities": [
+      "Mountain View",
+      "Outdoor Jacuzzi",
+      "Fireplace",
+      "Wi-Fi",
+      "Barbecue Setup"
+    ],
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "guests": 2,
+    "images": [
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&w=600&q=80"
+    ],
+    "category": "Cabin"
+  },
+  {
+    "id": "prop-3",
+    "name": "Azure Waves Heritage Beachfront Resort",
+    "description": "Walk directly out onto pristine golden sand beaches. This beautifully preserved heritage structure offers premium wood carvings alongside state-of-the-art modern automated features. Includes beachside dining open exclusively for guests.",
+    "location": "Varkala, Kerala",
+    "price": 18000,
+    "rating": 4.95,
+    "amenities": [
+      "Beach Access",
+      "Sea View",
+      "Complimentary Breakfast",
+      "Spa Services",
+      "Mini Bar"
+    ],
+    "bedrooms": 4,
+    "bathrooms": 4,
+    "guests": 8,
+    "images": [
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
+    ],
+    "category": "Beachfront"
+  },
+  {
+    "id": "prop-4",
+    "name": "zsda",
+    "description": "dgddsfsgfsgfsgsdfsgs",
+    "location": "adssdas",
+    "price": 3333,
+    "rating": 5,
+    "amenities": [
+      "3"
+    ],
+    "bedrooms": 2,
+    "bathrooms": 2,
+    "guests": 4,
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "category": "Luxury"
+  }
+]
